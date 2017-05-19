@@ -6,6 +6,7 @@
   "scripts": {
     "test:once": "karma start karma.conf.js --single-run",
     "build": "tsc -p src/",
+    "clean": "node clean-build",
     "serve": "lite-server -c=bs-config.json",
     "prestart": "npm run build",
     "start": "concurrently \"npm run build:watch\" \"npm run serve\"",
@@ -20,7 +21,9 @@
     "build:babel": "babel src -d src --extensions \".es6\" --source-maps",
     "copy-dist-files": "node ./copy-dist-files.js",
     "i18n": "ng-xi18n",
-    "lint": "tslint ./src/**/*.ts -t verbose"
+    "lint": "tslint ./src/**/*.ts -t verbose",
+    "aot:source-map-explorer": "node node_modules/source-map-explorer/index.js aot/dist/build.js",
+    "e2e": "node node_modules/protractor/bin/protractor protractor.config.js"
   },
   "keywords": [],
   "author": "",
@@ -45,6 +48,7 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
+    "@angular/cli": "^1.0.3",
     "@types/angular": "^1.5.16",
     "@types/angular-animate": "^1.5.5",
     "@types/angular-cookies": "^1.4.2",
@@ -62,6 +66,7 @@
     "http-server": "^0.9.0",
     "jasmine": "~2.4.1",
     "jasmine-core": "~2.4.1",
+    "jasmine-spec-reporter": "^4.1.0",
     "karma": "^1.3.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-cli": "^1.0.1",
@@ -70,15 +75,19 @@
     "karma-phantomjs-launcher": "^1.0.2",
     "lite-server": "^2.2.2",
     "lodash": "^4.16.2",
+    "mkdirp": "^0.5.1",
     "phantomjs-prebuilt": "^2.1.7",
     "protractor": "~4.0.14",
     "rollup": "^0.41.6",
     "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-filesize": "^1.3.2",
     "rollup-plugin-node-resolve": "2.0.0",
     "rollup-plugin-uglify": "^1.0.1",
     "source-map-explorer": "^1.3.2",
+    "ts-node": "^3.0.4",
     "tslint": "^3.15.1",
-    "typescript": "~2.2.0"
+    "typescript": "~2.2.0",
+    "webdriver-manager": "^12.0.6"
   },
   "repository": {}
 }

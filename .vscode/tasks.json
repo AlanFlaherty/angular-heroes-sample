@@ -1,0 +1,112 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "npm",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": true,
+
+    "tasks": [
+        {
+            "taskName": "test:once",
+            "args": ["run", "test:once"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "build",
+            "args": ["run", "build"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "clean",
+            "args": ["run", "clean"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "serve",
+            "args": ["run", "serve"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "prestart",
+            "args": ["run", "prestart"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "start",
+            "args": ["run", "start"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "pretest",
+            "args": ["run", "pretest"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "test",
+            "args": ["run", "test"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "pretest:once",
+            "args": ["run", "pretest:once"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "build:watch",
+            "args": ["run", "build:watch"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "build:upgrade",
+            "args": ["run", "build:upgrade"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "serve:upgrade",
+            "args": ["run", "serve:upgrade"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "build:aot",
+            "args": ["run", "build:aot"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "serve:aot",
+            "args": ["run", "serve:aot"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "build:babel",
+            "args": ["run", "build:babel"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "copy-dist-files",
+            "args": ["run", "copy-dist-files"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "i18n",
+            "args": ["run", "i18n"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "lint",
+            "args": ["run", "lint"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "aot:source-map-explorer",
+            "args": ["run", "aot:source-map-explorer"],
+            "echoCommand": true
+        },
+        {
+            "taskName": "e2e",
+            "args": ["run", "e2e"],
+            "echoCommand": true
+        }
+    ]
+}
